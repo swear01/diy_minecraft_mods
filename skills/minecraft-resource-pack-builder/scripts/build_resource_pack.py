@@ -419,7 +419,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--copy-to",
         help="After a successful build, copy the pack folder (and zip if --zip) into this directory "
-        "(e.g. Prism instance .../minecraft/resourcepacks or repo path resources/resourcepacks).",
+        "(e.g. Prism instance .../minecraft/resourcepacks). Avoid a second in-repo copy; use resource-packs/ as the single source.",
     )
     return parser.parse_args()
 

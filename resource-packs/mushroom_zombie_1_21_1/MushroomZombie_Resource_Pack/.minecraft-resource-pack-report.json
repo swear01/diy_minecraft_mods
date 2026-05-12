@@ -29,10 +29,6 @@
     "prompt": "Minecraft in-game style, one giant mob head filling almost the entire square canvas edge-to-edge like a scaled-up player head icon, chunky blocky pixels, mushroom zombie face: bright red fly agaric cap with big white spots covering top, three small eyes in a horizontal row on the face front, creepy fungal skin, no torso no shoulders no neck, minimal void gray background only in extreme corners if needed, no frame, no text, no UI"
   },
   "zip": "/Users/swearprom1/Documents/DIY_MC_mods/resource-packs/mushroom_zombie_1_21_1/MushroomZombie_Resource_Pack.zip",
-  "copy_to": {
-    "folder": "/Users/swearprom1/Documents/DIY_MC_mods/resources/resourcepacks/MushroomZombie_Resource_Pack",
-    "zip": "/Users/swearprom1/Documents/DIY_MC_mods/resources/resourcepacks/MushroomZombie_Resource_Pack.zip"
-  },
   "errors": [],
   "passed": true
 }

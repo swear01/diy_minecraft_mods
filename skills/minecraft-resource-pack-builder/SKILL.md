@@ -60,14 +60,14 @@ python3 skills/minecraft-resource-pack-builder/scripts/build_resource_pack.py \
 
 Do **not** combine `--skip-textures` with a spec that has **`texture_overrides`** and `--force`: the output folder is wiped first, so you end up with almost no `assets/minecraft/textures/…` and the game keeps vanilla textures. The script now **refuses** that combination.
 
-Copy the finished pack (folder + zip when `--zip`) into a game `resourcepacks` directory or repo staging folder:
+Copy the finished pack (folder + zip when `--zip`) into your **Minecraft instance** `resourcepacks` folder (or any path outside the repo). Built packs live under **`resource-packs/<project>/`** only—do not maintain a second copy inside `resources/resourcepacks`.
 
 ```bash
 python3 skills/minecraft-resource-pack-builder/scripts/build_resource_pack.py \
   --spec resource-pack-spec.json \
   --output ./CopperChimePack \
   --zip \
-  --copy-to resources/resourcepacks
+  --copy-to "/path/to/instance/minecraft/resourcepacks"
 ```
 
 Or set **`RESOURCE_PACK_COPY_TO`** to that path so you do not need the flag each time. Relative `--copy-to` paths are resolved from the **repository root** (parent of `skills/`).
