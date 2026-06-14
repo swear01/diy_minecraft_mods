@@ -7,21 +7,42 @@
 | 路徑 | 說明 |
 |------|------|
 | [`Karst_terrian/`](Karst_terrian/) | **NeoForge 1.21.1** mod「Karst Terrain」—喀斯特高地型 biome、石灰岩等。詳見該目錄 [`README.md`](Karst_terrian/README.md)。 |
+| [`Magic_Storage/`](Magic_Storage/) | **NeoForge 1.21.1** mod「Magic Storage」—仿 Refined Storage 2 的魔法儲物系統。詳見該目錄 [`AGENTS.md`](Magic_Storage/AGENTS.md)。 |
 | [`resource-packs/`](resource-packs/) | 資源包專案（例如 `mushroom_zombie_1_21_1`、`cantaloupe_1_21_1`）。**成品目錄與 `.zip` 都放這裡**，不要在 repo 裡再複製一份到 `resources/resourcepacks`。 |
-| [`skills/`](skills/) | 資源包／mod 規格、紋路、音效、GameTest 等輔助 skill 與腳本。 |
+| [`.agents/skills/`](.agents/skills/) | 資源包／mod 規格、紋路、音效、GameTest 等輔助 skill 與腳本。 |
 
-## Mod 開發（Karst_terrian）
+## 環境設定（Java）
 
-- **需求：** Java 21、專案內附的 Gradle Wrapper。  
-- **常用指令：**
+本 repo 使用 Homebrew 安裝的 JDK，不在系統 PATH 上。建置前需設定 `JAVA_HOME`：
+
+```bash
+export JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+```
+
+（JDK 21 用於 1.21.1 NeoForge；JDK 25 在 `/opt/homebrew/opt/openjdk/` 供未來升級）
+
+## Mod 開發
+
+### Magic Storage
+
+```bash
+cd Magic_Storage
+export JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+./gradlew build              # 編譯 + SelfTest（70 項）+ GameTest（53 項）
+./gradlew runClient          # 啟動客戶端測試
+./gradlew runGameTestServer  # 僅跑 GameTest
+```
+
+### Karst Terrain
 
 ```bash
 cd Karst_terrian
+export JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
 ./gradlew build
 ./gradlew runClient
 ```
 
-執行與依賴版本以 `Karst_terrian/README.md` 與 `gradle.properties` 為準。
+執行與依賴版本以各子目錄 `gradle.properties` 為準。
 
 ## 資源包
 
@@ -31,7 +52,7 @@ cd Karst_terrian
 
 ## 版控注意
 
-- `Karst_terrian` 的 `build/`、`.gradle/`、`run/` 等由該子專案 `.gitignore` 排除。  
+- `Karst_terrian`、`Magic_Storage` 的 `build/`、`.gradle/`、`run/` 等由各子專案 `.gitignore` 排除。  
 - 根目錄忽略 `node_modules`、Python `__pycache__`、以及 `.claude/settings.local.json`。
 
 ## 相關 GitHub
