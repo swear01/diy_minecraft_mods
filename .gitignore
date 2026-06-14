@@ -12,6 +12,6 @@ yarn-error.log*
 # 本機 Claude 設定
 .claude/settings.local.json
 
-# Skill symlinks (managed by skillshare-reveal, not git)
+# Skill symlinks (machine-specific absolute paths, not git)
 .agents/skills/
-.skillshare-reveal
+# .skillshare-reveal is the manifest — DO NOT gitignore it; commit it so other machines can sync
