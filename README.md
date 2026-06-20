@@ -7,7 +7,7 @@
 | 路徑 | 說明 |
 |------|------|
 | [`Karst_terrian/`](Karst_terrian/) | **NeoForge 1.21.1** mod「Karst Terrain」—喀斯特高地型 biome、石灰岩等。詳見該目錄 [`README.md`](Karst_terrian/README.md)。 |
-| [`Magic_Storage/`](Magic_Storage/) | **NeoForge 1.21.1** mod「Magic Storage」—仿 Refined Storage 2 的魔法儲物系統。詳見該目錄 [`AGENTS.md`](Magic_Storage/AGENTS.md)。 |
+| [`Magic_Storage/`](Magic_Storage/) | **NeoForge 1.21.1** mod「Magic Storage」—一站式儲存+合成系統（概念仿 Terraria Magic Storage，實作模式參考 Refined Storage 2）。**獨立 git repo**；詳見該目錄 [`docs/overview.md`](Magic_Storage/docs/overview.md)。 |
 | [`resource-packs/`](resource-packs/) | 資源包專案（例如 `mushroom_zombie_1_21_1`、`cantaloupe_1_21_1`）。**成品目錄與 `.zip` 都放這裡**，不要在 repo 裡再複製一份到 `resources/resourcepacks`。 |
 | [`.agents/skills/`](.agents/skills/) | 資源包／mod 規格、紋路、音效、GameTest 等輔助 skill 與腳本。 |
 
@@ -48,7 +48,7 @@ export JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
 
 - 每個子資料夾通常對應一個包（spec、解開的資料夾、可選 `.zip`）。  
 - 要給遊戲用時，將資料夾或 zip 放到**遊戲實例**的 `resourcepacks`，或使用 skill 腳本的 `--copy-to` 指到該路徑。  
-- 建置流程見 [`skills/minecraft-resource-pack-builder/SKILL.md`](skills/minecraft-resource-pack-builder/SKILL.md)。
+- 建置流程見 [`.agents/skills/minecraft-resource-pack-builder/SKILL.md`](.agents/skills/minecraft-resource-pack-builder/SKILL.md)。
 
 ## 版控注意
 
